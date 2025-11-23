@@ -15,5 +15,4 @@ func (app *application) routes() *http.ServeMux {
 	mux.HandleFunc("POST /snippet/create", app.snippetCreatePost)
 
 	return mux
-
 }
