@@ -7,20 +7,20 @@ import (
 )
 
 type Validator struct {
-	fieldErrors map[string]string
+	FieldErrors map[string]string
 }
 
 func (v *Validator) Valid() bool {
-	return len(v.fieldErrors) == 0
+	return len(v.FieldErrors) == 0
 }
 
 func (v *Validator) AddFieldErrors(key, message string) {
-	if v.fieldErrors == nil {
-		v.fieldErrors = make(map[string]string)
+	if v.FieldErrors == nil {
+		v.FieldErrors = make(map[string]string)
 	}
 
-	if _, exists := v.fieldErrors[key]; !exists {
-		v.fieldErrors[key] = message
+	if _, exists := v.FieldErrors[key]; !exists {
+		v.FieldErrors[key] = message
 	}
 }
 
