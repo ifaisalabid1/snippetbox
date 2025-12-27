@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ifaisalabid1/snippetbox/internals/models"
+	"github.com/ifaisalabid1/snippetbox/internal/models"
 )
 
 type templateData struct {
